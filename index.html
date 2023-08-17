@@ -48,12 +48,14 @@ margin-top:40%;
 
     var foras = 0;
     var audio = new Audio('pilantra.mpeg');
+    var audiow = new Audio('fiau.mpeg');
     
     document.getElementById("DeuBom").addEventListener("click", redirect);
 
     document.getElementById("Opa").addEventListener("click", MudaDeLugar);
 
     function redirect() {
+      setTimeout(() => { audio2.play();}, 1500)
       window.location = "https://www.youtube.com/watch?v=2bIokQEKmMY";
     }
 
@@ -76,6 +78,6 @@ margin-top:40%;
   </script>
 </body>
   <footer>
-    <p>v1.04</p>
+    <p>v1.05</p>
   </footer>
 </html>
