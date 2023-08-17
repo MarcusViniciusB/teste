@@ -37,8 +37,12 @@ margin-top:40%;
   <h1 id="Pedido">Quer namorar comigo?</h1>
   <button id="DeuBom">Sim</button>
   <button id="Opa">Não</button>
+  <h2 id="eita"></h2>
 
   <script>
+
+    var foras = 0;
+    
     document.getElementById("DeuBom").addEventListener("click", redirect);
 
     document.getElementById("Opa").addEventListener("click", MudaDeLugar);
@@ -48,10 +52,16 @@ margin-top:40%;
     }
 
     function MudaDeLugar() {
+      foras += 1;
       const botao = document.getElementById('Opa');
       botao.style.position = 'absolute';
       botao.style.left = Math.floor(Math.random() * screen.width * 0.80) + 1 + 'px';
       botao.style.top = Math.floor(Math.random() * screen.height * 0.9) + 1 + 'px';
+      if(foras >= 5){
+        const texto = document.getElementById('eita');
+        texto.text = "Para de palhaçada";
+      }
+        
     }
   </script>
 </body>
