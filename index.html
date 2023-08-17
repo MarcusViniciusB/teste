@@ -57,8 +57,11 @@ margin-top:40%;
       botao.style.position = 'absolute';
       botao.style.left = Math.floor(Math.random() * screen.width * 0.80) + 1 + 'px';
       botao.style.top = Math.floor(Math.random() * screen.height * 0.9) + 1 + 'px';
-      if(foras >= 5){
+      if(foras >= 5 && foras <= 9){
         document.getElementById('eita').innerHTML += "Para de palhaçada<br>";
+      }else if(foras > 9){
+        var audio = new Audio('pilantra.mpeg');
+        audio.play();
       }
         
     }
