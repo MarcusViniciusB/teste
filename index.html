@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedido de Namoro</title>
+<style>
+  button {
+    background-color: pink;
+    border: 1px solid #ff0066;
+    border-radius: 20px;
+    padding: 20px 30px;
+    font-size: 20px;
+  }
+  
+  h1 {
+margin-top:40%;
+    font-family: Arial;
+    color: red;
+  }
+  
+  body {
+    text-align: center;
+    background-color: #ffe6f0;
+  }
+  
+  #DeuBom {
+    border-radius: 80px 60px 60px 60px;
+  }
+  
+  #Opa {
+    border-radius: 60px 80px 60px 60px;
+  }
+</style>
+</head>
+<body>
+  <h1 id="Pedido">Quer namorar comigo?</h1>
+  <button id="DeuBom">Sim</button>
+  <button id="Opa">Não</button>
+
+  <script>
+    document.getElementById("DeuBom").addEventListener("click", redirect);
+
+    document.getElementById("Opa").addEventListener("click", MudaDeLugar);
+
+    function redirect() {
+      window.location = "https://www.youtube.com/watch?v=2bIokQEKmMY";
+    }
+
+    function MudaDeLugar() {
+      const botao = document.getElementById('Opa');
+      botao.style.position = 'absolute';
+      botao.style.left = Math.floor(Math.random() * screen.width * 0.80) + 1 + 'px';
+      botao.style.top = Math.floor(Math.random() * screen.height * 0.9) + 1 + 'px';
+    }
+  </script>
+</body>
+</html>
